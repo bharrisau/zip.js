@@ -55,20 +55,14 @@
 
 				if (zipWriter)
 					nextFile();
-				else if (creationMethod == "Blob") {
+				else {
 					writer = new zip.BlobWriter();
 					createZipWriter();
-				} else {
-					createTempFile(function(fileEntry) {
-						zipFileEntry = fileEntry;
-						writer = new zip.FileWriter(zipFileEntry);
-						createZipWriter();
-					});
 				}
 			},
 			getBlobURL : function(callback) {
 				zipWriter.close(function(blob) {
-					var blobURL = creationMethod == "Blob" ? URL.createObjectURL(blob) : zipFileEntry.toURL();
+					var blobURL = URL.createObjectURL(blob);
 					callback(blobURL);
 					zipWriter = null;
 				});
@@ -85,7 +79,6 @@
 		var downloadButton = document.getElementById("download-button");
 		var fileList = document.getElementById("file-list");
 		var filenameInput = document.getElementById("filename-input");
-		var creationMethodInput = document.getElementById("creation-method-input");
 		if (typeof requestFileSystem == "undefined")
 			creationMethodInput.options.length = 1;
 		model.setCreationMethod(creationMethodInput.value);
