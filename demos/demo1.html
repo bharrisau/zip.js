@@ -32,6 +32,12 @@
 			</li>
 			<li>
 				<label>
+					<span class="form-label">board quantity</span>
+					<input type="text" id="pcb-qty" value="10">
+				</label>
+			</li>
+			<li>
+				<label>
 					<span class="form-label">layers</span>
 					<select id="pcb-layers">
 						<option value="2">2</option>
@@ -87,15 +93,6 @@
 			</li>
 			<li>
 				<label>
-					<span class="form-label">layers</span>
-					<select id="pcb-layers">
-						<option value="2">2</option>
-						<option value="4">4</option>
-					</select>
-				</label>
-			</li>
-			<li>
-				<label>
 					<span class="form-label">add files into the project</span>
 					<input type="file" multiple id="file-input">
 				</label>
@@ -103,11 +100,33 @@
 			<li>
 				<span class="form-label">project content</span>
 				<ul id="file-list">
+					<li>Front copper - <span id="entry-fcu"></span></li>
+					<li>Front mask - <span id="entry-fmsk"></span></li>
+					<li>Front silk - <span id="entry-fslk"></span></li>
+					<li>Back copper - <span id="entry-bcu"></span></li>
+					<li>Back mask - <span id="entry-bmsk"></span></li>
+					<li>Back silk - <span id="entry-bslk"></span></li>
+					<li>Edge cuts - <span id="entry-edge"></span></li>
+					<li>Plated drill - <span id="entry-pdrl"></span></li>
+					<li>Unplated drill - <span id="entry-ndrl"></span></li>
+					<li hidden id='li-2cu'>Front-inner copper - <span id="entry-2cu"></span></li>
+					<li hidden id='li-3cu'>Back-inner copper - <span id="entry-3cu"></span></li>
 				</ul>
 			</li>
 			<li>
 				<span class="form-label">download the zip file</span>
 				<a id="download-button" href="#">Download</a>
+			</li>
+			<li>
+				<span class="form-label">email content</span>
+				<ul id="file-list">
+					<li>Quantity - <span id="entry-qty">10</span></li>
+					<li>Layers - <span id="entry-layer">2</span></li>
+					<li>Solder mask - <span id="entry-mask">Green</span></li>
+					<li>Thickness - <span id="entry-thick">1.6</span></li>
+					<li>Board finish - <span id="entry-finish">Pb</span></li>
+					<li>Copper thickness - <span id="entry-cu">1oz</span></li>
+				</ul>
 			</li>
 		</ol>
 
