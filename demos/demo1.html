@@ -26,29 +26,84 @@
 		<ol id="demo-container">
 			<li>
 				<label>
-					<span class="form-label">choose temporary storage</span>
-					<select id="creation-method-input">
-						<option value="Blob">RAM</option>
-						<option value="File">HDD</option>
+					<span class="form-label">project name</span>
+					<input type="text" id="filename-input" value="Example">
+				</label>
+			</li>
+			<li>
+				<label>
+					<span class="form-label">layers</span>
+					<select id="pcb-layers">
+						<option value="2">2</option>
+						<option value="4">4</option>
 					</select>
 				</label>
 			</li>
 			<li>
 				<label>
-					<span class="form-label">add files into the zip</span>
+					<span class="form-label">solder mask</span>
+					<select id="pcb-mask">
+						<option value="Green">Green</option>
+						<option value="Red">Red</option>
+						<option value="Blue">Blue</option>
+						<option value="Yellow">Yellow</option>
+						<option value="Black">Black</option>
+						<option value="White">White</option>
+					</select>
+				</label>
+			</li>
+			<li>
+				<label>
+					<span class="form-label">thickness</span>
+					<select id="pcb-thick">
+						<option value="1.6">1.6mm</option>
+						<option value="0.4">0.4mm</option>
+						<option value="0.6">0.6mm</option>
+						<option value="0.8">0.8mm</option>
+						<option value="1.0">1.0mm</option>
+						<option value="1.2">1.2mm</option>
+						<option value="2.0">2.0mm</option>
+					</select>
+				</label>
+			</li>
+			<li>
+				<label>
+					<span class="form-label">board finish</span>
+					<select id="pcb-finish">
+						<option value="Pb">Pb-solder</option>
+						<option value="RoHS">RoHS Pb-free solder</option>
+						<option value="ENIG">ENIG-gold immersion</option>
+					</select>
+				</label>
+			</li>
+			<li>
+				<label>
+					<span class="form-label">copper thickness</span>
+					<select id="pcb-cu">
+						<option value="1oz">1oz 35um</option>
+						<option value="2oz">2oz 70um</option>
+					</select>
+				</label>
+			</li>
+			<li>
+				<label>
+					<span class="form-label">layers</span>
+					<select id="pcb-layers">
+						<option value="2">2</option>
+						<option value="4">4</option>
+					</select>
+				</label>
+			</li>
+			<li>
+				<label>
+					<span class="form-label">add files into the project</span>
 					<input type="file" multiple id="file-input">
 				</label>
 			</li>
 			<li>
-				<span class="form-label">view zip content</span>
+				<span class="form-label">project content</span>
 				<ul id="file-list">
 				</ul>
-			</li>
-			<li>
-				<label>
-					<span class="form-label">set zip file name</span>
-					<input type="text" id="filename-input" value="Example.zip">
-				</label>
 			</li>
 			<li>
 				<span class="form-label">download the zip file</span>
